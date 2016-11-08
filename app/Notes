@@ -1,0 +1,7 @@
+Instagram:
+user id=6e1beccdaae74416aece98cbfcf5bc59
+access_token=528654286.6e1becc.1619a4ba80504dccb3eeab80dd1fc734
+access_token=528654286.6e1becc.1619a4ba80504dccb3eeab80dd1fc734
+
+https://api.instagram.com/oauth/authorize/?client_id=&redirect_uri=http://localhost&response_type=code
+https://instagram.com/oauth/authorize/?client_id=6e1beccdaae74416aece98cbfcf5bc59&redirect_uri=http://localhost&response_type=token

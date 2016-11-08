@@ -1,0 +1,126 @@
+
+<div class="container" ng-controller="ContactCtrl">
+    <div class="row">
+        <div>
+            <p style="padding:10px;"></p>
+        </div>
+
+        <div class="col-xs-10 col-xs-offset-1 col-sm-4 col-sm-offset-1">
+            <div>
+                <h4 style="text-align:center">Contact me Today</h4>
+                <p style="color:grey;">Feel free to contact me if you have any questions or comments about the 
+                service i provide. Also, you could always send me a friendly hello</p>
+            </div>
+            <div>
+                <p style="padding:10px;"></p>
+            </div>
+            <div>
+                <h4 style="text-align:center">Contact Information</h4>
+                <address style="color:grey; text-align:center">
+		              St-1 H-10, Wahdat Colony<br>
+		              Jutial, Gilgit<br>
+		              Pakistan<br>
+		              <i class="fa fa-phone"></i>: +923335248189<br>
+		              <i class="fa fa-skype"></i>: shahyd.ammer<br>
+		              <i class="fa fa-envelope"></i>: 
+                         <a href="mailto:shahyd.ammerr@gmail.com">
+                         connect@shahidammer</a>
+                </address>
+            </div>
+        </div>
+
+         
+        <div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-1">
+            
+            
+            <form style="color:grey;" class="form-horizontal" name="userForm" ng-submit="submitForm(user)" novalidate>
+                <div class="row">  
+                        <label >Your Full Name* </label>
+                        <p>I always like to know who I am talking to</p>
+
+
+
+
+                        <div class ="col-sm-5"> 
+
+                            <div class="form-group" ng-class="{ 'has-error' : userForm.fname.$invalid && !userForm.fname.$pristine }">
+                                <input type="text" class="form-control" name="fname" ng-model="user.fname"  required>
+                                <p  style="font-size:10px;color:grey;">First Name</p>
+                                <p ng-show="userForm.fname.$invalid && !userForm.fname.$pristine" class="help-block">You first name is required.</p>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-5">
+
+                            <div class="form-group" ng-class="{ 'has-error' : userForm.lname.$invalid && !userForm.lname.$pristine }">
+                                <input type="text" class="form-control" name="lname" ng-model="user.lname" required>
+                                <p  style="font-size:10px;color:grey;">Last Name</p>
+                                <p ng-show="userForm.lname.$invalid && !userForm.lname.$pristine" class="help-block">You last name is required.</p>
+
+                            </div>
+
+                        </div>
+
+
+
+
+
+                        <div class ="col-sm-10" > 
+
+
+                            <div class="form-group"  ng-class="{ 'has-error' : userForm.email.$invalid && !userForm.email.$pristine }">
+                                <label for="email">Email Address*</label>
+                                <input type="email" class="form-control" id="email" name="email" ng-model="user.email" required>
+                                <p ng-show="userForm.email.$invalid && !userForm.email.$pristine" class="help-block">Enter a valid email.</p>
+                            </div>
+
+                        </div>
+
+
+
+
+                        <div>
+                            <p style="padding:10px;"></p>
+                        </div>
+
+
+
+
+                        <div class ="col-sm-10"> 
+
+                            <div class="form-group" ng-class="{ 'has-error' : userForm.message.$invalid && !userForm.message.$pristine }">
+                                <label for="textArea">Your Message*</label>
+                                <p>Send something awesome to my inbox</p>
+                                <textarea class="form-control" name="message" id="textArea" rows="3" ng-model="user.message" required>
+                                <p ng-show="userForm.message.$invalid && !userForm.message.$pristine" class="help-block">Type a message.</p>
+                                </textarea>
+                            </div>
+
+                        </div>
+
+
+                        <div>
+                            <p style="padding:1px;"></p>
+                        </div>
+
+
+              </div>
+                <button type="submit" class="btn btn-primary btn-sm" ng-disabled="userForm.$invalid">Send</button>
+            </form> <!--form -->
+    
+            <div>
+                <p style="padding:5px"></p>
+            </div>
+            
+        </div><!--form container -->
+        <div>
+   
+            <div style="padding-bottom:5px;" >
+                <a href="{{locationUrl}}" ><img id="locPic" src="../app/assets/map.PNG"> </a>
+            </div>
+        </div>
+    </div><!--row row-header main -->
+    
+</div>
+
+
